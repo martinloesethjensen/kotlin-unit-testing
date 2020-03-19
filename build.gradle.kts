@@ -3,7 +3,6 @@ val junitVersion: String by project
 val mockkVersion: String by project
 val kluentVersion: String by project
 
-
 plugins {
     kotlin("jvm") version "1.3.70"
     java

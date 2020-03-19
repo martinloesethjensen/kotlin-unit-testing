@@ -1,8 +1,8 @@
-class Question(id: Int, author: User, private var title: String, question: String)
-    : QuestionOrAnswer(id, author, question) {
+class Question(id: Int, author: User, private var title: String, question: String) :
+    QuestionOrAnswer(id, author, question) {
 
     init {
-        if(!isValid())
+        if (!isValid())
             throw QuestionException("Question either has no title or body")
     }
 
@@ -13,7 +13,6 @@ class Question(id: Int, author: User, private var title: String, question: Strin
             // then have it's own validation
             return !(title.isBlank() || body.isBlank())
         }
-
 
     var answered = false
         private set
@@ -35,7 +34,6 @@ class Question(id: Int, author: User, private var title: String, question: Strin
             return _tags.toList()
         }
 
-
     // viewed
     // active when?
     // share (this is the permalink)
@@ -51,7 +49,6 @@ class Question(id: Int, author: User, private var title: String, question: Strin
         author.questionOrAnswerVotedOn(direction)
     }
 
-
     fun close(reason: String) {
         if (closed) throw QuestionException("Question already closed")
         closed = true
@@ -61,22 +58,18 @@ class Question(id: Int, author: User, private var title: String, question: Strin
     fun addAnswer(answer: Answer) {
         val answerFromCollection = answers.firstOrNull { it.id == answer.id }
 
-        if(answerFromCollection != null) throw QuestionException("This answer already exists for this question")
+        if (answerFromCollection != null) throw QuestionException("This answer already exists for this question")
         _answers.add(answer)
         answered = true
     }
 
     fun approveAnswer(answerId: Int) {
 
-        if(answers.any {it.approved})
+        if (answers.any { it.approved })
             throw QuestionException("There is already an approved answer for this question")
 
         val answer = answers.firstOrNull { it.id == answerId } ?: throw QuestionException("Unable to find answer ro approve")
 
         answer.approved = true
     }
-
 }
-
-
-

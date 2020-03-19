@@ -14,17 +14,15 @@ class User(val id: Int, val name: String) {
         reputation += amount
     }
 
-    fun canEditPost():Boolean {
+    fun canEditPost(): Boolean {
         return reputation > 2000
     }
 
-    fun canComment():Boolean {
+    fun canComment(): Boolean {
         return reputation > 50
     }
 
-    fun canVote():Boolean {
+    fun canVote(): Boolean {
         return reputation > 15
     }
-
-
 }

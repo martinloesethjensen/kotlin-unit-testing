@@ -1,9 +1,8 @@
 class Answer(id: Int, author: User, answer: String) : QuestionOrAnswer(id, author, answer) {
 
     init {
-        if(!isValid())
+        if (!isValid())
             throw QuestionException("Answer either has no body")
-
     }
 
     private fun isValid(): Boolean {
@@ -14,7 +13,6 @@ class Answer(id: Int, author: User, answer: String) : QuestionOrAnswer(id, autho
         return !(body.isBlank())
     }
 
-
     override fun vote(direction: VoteEnum) {
         when (direction) {
             VoteEnum.Up -> votes++
@@ -24,6 +22,4 @@ class Answer(id: Int, author: User, answer: String) : QuestionOrAnswer(id, autho
     }
 
     var approved: Boolean = false
-
 }
-
