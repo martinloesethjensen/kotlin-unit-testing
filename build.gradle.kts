@@ -1,3 +1,9 @@
+
+val junitVersion: String by project
+val mockkVersion: String by project
+val kluentVersion: String by project
+
+
 plugins {
     kotlin("jvm") version "1.3.70"
     java
@@ -9,11 +15,13 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
-    testImplementation(group = "org.junit.jupiter", name = "junit-jupiter", version = "5.4.2")
+    testImplementation(group = "org.junit.jupiter", name = "junit-jupiter", version = junitVersion)
+    testImplementation("org.amshove.kluent:kluent:$kluentVersion")
 }
 
 tasks.test {
