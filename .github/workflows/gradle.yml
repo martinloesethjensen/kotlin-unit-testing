@@ -24,8 +24,3 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
-    - name: Kotlin Linter
-      uses: vroy/gha-kotlin-linter@v2
-      with:
-        # A list of patterns to pass along to the ktlint command
-        patterns: "**/*.kt"
