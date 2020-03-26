@@ -21,6 +21,7 @@ dependencies {
     implementation(kotlin("stdlib-jdk8"))
     testImplementation(group = "org.junit.jupiter", name = "junit-jupiter", version = junitVersion)
     testImplementation("org.amshove.kluent:kluent:$kluentVersion")
+    testImplementation("io.mockk:mockk:$mockkVersion")
 }
 
 tasks.test {
