@@ -25,7 +25,7 @@ class UserTest {
     @Nested
     inner class `post should be able to` {
 
-        val editReputationLimit = 2000
+        private val editReputationLimit = 2000
 
         @Test
         fun `edit if reputation is greater than 2000`() {
