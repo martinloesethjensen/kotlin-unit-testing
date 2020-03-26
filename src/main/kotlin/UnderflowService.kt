@@ -21,17 +21,21 @@ class UnderflowService(val questionRepository: IQuestionRepository, val userRepo
     }
 
     override fun voteUpQuestion(questionId: Int, voterId: Int): Int {
-        val question: Question = questionRepository.findQuestion(questionId)
-        val voter: User = userRepository.findUser(voterId)
-        val owner: User = userRepository.findUser(question.userId)
+        try {
+            val question: Question = questionRepository.findQuestion(questionId)
+            val voter: User = userRepository.findUser(voterId)
+            val owner: User = userRepository.findUser(question.userId)
 
-        if (voter.canVote()) {
-            question.voteUp()
-            owner.questionOrAnswerVotedOn(VoteEnum.Up)
-        } else throw QuestionException("User does not have enough reputation to vote")
-        questionRepository.update(question)
-        userRepository.update(owner)
-        return question.votes
+            if (voter.canVote()) {
+                question.voteUp()
+                owner.questionOrAnswerVotedOn(VoteEnum.Up)
+            } else throw QuestionException("User does not have enough reputation to vote")
+            questionRepository.update(question)
+            userRepository.update(owner)
+            return question.votes
+        } catch (e: Exception) {
+            throw ServiceException("Unable to vote up for question")
+        }
     }
 
     override fun voteDownQuestion(questionId: Int, voterId: Int): Int {
