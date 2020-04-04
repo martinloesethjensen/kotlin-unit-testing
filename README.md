@@ -2,8 +2,4 @@
 
 ![Java CI with Gradle](https://github.com/martinloesethjensen/kotlin-unit-testing-pluralsight/workflows/Java%20CI%20with%20Gradle/badge.svg)
 
-
-
-
-
-
+[![](https://sourcerer.io/fame/martinloesethjensen/martinloesethjensen/kotlin-unit-testing/images/0)](https://sourcerer.io/fame/martinloesethjensen/martinloesethjensen/kotlin-unit-testing/links/0)[![](https://sourcerer.io/fame/martinloesethjensen/martinloesethjensen/kotlin-unit-testing/images/1)](https://sourcerer.io/fame/martinloesethjensen/martinloesethjensen/kotlin-unit-testing/links/1)[![](https://sourcerer.io/fame/martinloesethjensen/martinloesethjensen/kotlin-unit-testing/images/2)](https://sourcerer.io/fame/martinloesethjensen/martinloesethjensen/kotlin-unit-testing/links/2)[![](https://sourcerer.io/fame/martinloesethjensen/martinloesethjensen/kotlin-unit-testing/images/3)](https://sourcerer.io/fame/martinloesethjensen/martinloesethjensen/kotlin-unit-testing/links/3)[![](https://sourcerer.io/fame/martinloesethjensen/martinloesethjensen/kotlin-unit-testing/images/4)](https://sourcerer.io/fame/martinloesethjensen/martinloesethjensen/kotlin-unit-testing/links/4)[![](https://sourcerer.io/fame/martinloesethjensen/martinloesethjensen/kotlin-unit-testing/images/5)](https://sourcerer.io/fame/martinloesethjensen/martinloesethjensen/kotlin-unit-testing/links/5)[![](https://sourcerer.io/fame/martinloesethjensen/martinloesethjensen/kotlin-unit-testing/images/6)](https://sourcerer.io/fame/martinloesethjensen/martinloesethjensen/kotlin-unit-testing/links/6)[![](https://sourcerer.io/fame/martinloesethjensen/martinloesethjensen/kotlin-unit-testing/images/7)](https://sourcerer.io/fame/martinloesethjensen/martinloesethjensen/kotlin-unit-testing/links/7)
